@@ -25,6 +25,15 @@ $background-opacity: 0.2;
   }
 }
 
+//set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 @mixin easeOut {
   transition: all 1.5s ease-out;
 }
