@@ -3,7 +3,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   right: 35px;
   top: 35px;
   cursor: pointer;
@@ -66,7 +66,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: darken($primary-color, 30);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -79,7 +79,7 @@
 
   //Branding side
   &-branding {
-    background: $primary-color;
+    background: darken($primary-color, 60);
     @include easeOut;
     transform: translate3d(0, 100%, 0);
     &.show {
@@ -91,11 +91,11 @@
   .portrait {
     height: 250px;
     width: 250px;
-    background-image: url(../img/portrait.jpeg);
+    background-image: url(../img/portrait.jpg);
     background-size: 250px;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: $secondary-color;
+    background-color: $primary-color;
 
     border-radius: 50%;
     border: solid 3px $secondary-color;
@@ -109,10 +109,9 @@
     }
 
     &.current > a {
-      color: $secondary-color;
+      color: $primary-color;
     }
   }
-
   .nav-link {
     display: inline-block;
     position: relative;
@@ -120,12 +119,12 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: set-text-color($primary-color);
+    color: set-text-color($secondary-color);
     text-decoration: none;
     @include easeOut;
 
     &:hover {
-      color: $secondary-color;
+      color: $primary-color;
     }
   }
 }

@@ -1,9 +1,10 @@
-$primary-color: rgb(47, 94, 116);
-$secondary-color: #eece1a;
+$primary-color: #ded5d0;
+$secondary-color: #710a35;
+$third-color: #e4becf;
 //"node-sass -w scss/ -o dist/css/ --recursive"
 $show-home-image: true;
-$home-image: url(../img/lisko.jpg);
-$background-opacity: 0.2;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.5;
 
 @mixin background {
   @if $show-home-image {
@@ -16,18 +17,43 @@ $background-opacity: 0.2;
         position: absolute;
         top: 0;
         right: 0;
-        width: 100%;
         height: 100%;
+        width: 100%;
+
         z-index: -1;
         background: rgba($primary-color, $background-opacity);
       }
     }
   }
 }
+@mixin background_banner {
+  .banner {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($primary-color, $background-opacity);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+      z-index: -1;
+    }
+    & > * {
+      z-index: 0;
+      position: relative;
+    }
+  }
+}
 
 //set text color
 @function set-text-color($color) {
-  @if (lightness($color) > 40) {
+  @if (lightness($color) < 40) {
     @return #000;
   } @else {
     @return #fff;

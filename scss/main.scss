@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 * {
   box-sizing: border-box;
@@ -12,7 +13,7 @@ body {
   height: 100%;
   margin: 0;
   line-height: 1.5;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 //HEADINGS
@@ -28,7 +29,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(lighten($secondary-color, 2), 0.2);
   }
 }
 
@@ -75,7 +76,7 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bio-img bio bio"
+    "bio bio bio-img"
     "job-1 job-2 job-3";
   grid-template-columns: repeat(3, 1fr);
 
@@ -104,27 +105,67 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: rgba(lighten($secondary-color, 2), 0.2);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+}
+
+//slideshow
+.project-info {
+  margin: 20px;
+  padding: 0;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+
+  .right-side {
+    align-content: center;
+    .model3d {
+      border: 5px solid $secondary-color;
+    }
+
+    .about p {
+      font-size: 20px;
+      justify-content: left;
+      background: darken($primary-color, 10);
+      padding: 2rem;
+    }
+  }
+
+  .imgs {
+    display: subgrid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    max-width: 500px;
+    border: $secondary-color solid 3px;
+    grid-gap: 5px;
+    margin: 5px;
+    border: 5px solid $secondary-color;
+  }
+  .imgs img {
+    width: 100%;
   }
 }
 
 // Work/Projects
 .projects {
   display: grid;
-  gap: 0.7rem;
+  gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   img {
     width: 100%;
-    border: 3px solid #fff;
+    border: 3px solid $secondary-color;
     &:hover {
       opacity: 0.5;
-      border-color: $secondary-color;
+      border-color: #222;
       @include easeOut;
     }
   }
 }
+
+//background banner
+@include background_banner;
 
 //Contact Page
 .boxes {
@@ -157,22 +198,26 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  font-weight: bolder;
+  font-size: 28px;
   &:hover {
-    background-color: $secondary-color;
-    color: set-text-color($secondary-color);
+    color: set-text-color($third-color);
+    width: 100%;
+    transition: width 0.3s;
   }
 }
-
-.btn-dark {
-  @extend.btn;
-  background-color: darken($primary-color, 50);
-  color: #fff;
+.btn::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s;
 }
-
-.btn-light {
-  @extend .btn;
-  background-color: lighten($primary-color, 50);
-  color: #333;
+.btn:hover::after {
+  background-color: $secondary-color;
+  width: 100%;
+  transition: width 0.3s;
 }
 
 #main-foter {
@@ -184,3 +229,5 @@ main {
 }
 
 @import "mobile";
+
+//slide show
