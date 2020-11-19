@@ -41,14 +41,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #9f8576;
+    background: #cec8c6;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 1.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #493b33;
+    background: #e9e3e1;
     transition: all 1.5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
@@ -144,8 +144,15 @@ header {
   z-index: 2;
   width: 100%; }
 
-.text-secondary {
-  color: #710a35; }
+#workshop {
+  font-weight: bold; }
+
+.smaller-h {
+  color: #710a35;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif; }
 
 main {
   padding: 4rem;
@@ -165,7 +172,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bio bio bio-img" "job-1 job-2 job-3";
+  grid-template-areas: "bio bio bio-img" "workshop workshop skills" "workshop workshop hobby";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-img {
     grid-area: bio-img;
@@ -177,12 +184,12 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job-1; }
-  .about-info .job-2 {
-    grid-area: job-2; }
-  .about-info .job-3 {
-    grid-area: job-3; }
+  .about-info .workshop {
+    grid-area: workshop; }
+  .about-info .skills {
+    grid-area: skills; }
+  .about-info .hobby {
+    grid-area: hobby; }
   .about-info .job {
     background: rgba(122, 11, 57, 0.2);
     padding: 0.5rem;
@@ -294,7 +301,7 @@ main {
 #main-foter {
   text-align: center;
   padding: 1rem;
-  background: #c9bab2;
+  background: #ded5d0;
   color: #fff;
   height: 60px; }
 
