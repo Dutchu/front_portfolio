@@ -4,6 +4,14 @@ const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
 const navItem = document.querySelectorAll(".nav-item");
+// back button
+const backBtn = document.querySelector(".back-btn");
+window.onload = function () {
+  backBtn.addEventListener("click", goBack);
+  function goBack() {
+    window.history.back();
+  }
+};
 
 //Set Initial State Of Menu
 let showMenu = false;

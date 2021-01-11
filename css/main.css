@@ -21,6 +21,28 @@
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
+.back-btn {
+  position: absolute;
+  z-index: 10;
+  left: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 1.5s ease-out; }
+  .back-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px;
+    background: #fff;
+    transition: all 1.5s ease-out; }
+  .back-btn .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); }
+  .back-btn .btn-line:nth-child(2) {
+    opacity: 0; }
+  .back-btn .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px); }
+  .back-btn.close {
+    transform: rotate(180deg); }
+
 .menu {
   position: fixed;
   top: 0;
@@ -69,7 +91,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #ded5d0; }
+      color: #f486b4; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -81,7 +103,7 @@
     text-decoration: none;
     transition: all 1.5s ease-out; }
     .menu .nav-link:hover {
-      color: #ded5d0; }
+      color: #f486b4; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
