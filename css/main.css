@@ -21,28 +21,6 @@
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
-.back-btn {
-  position: absolute;
-  z-index: 10;
-  left: 35px;
-  top: 35px;
-  cursor: pointer;
-  transition: all 1.5s ease-out; }
-  .back-btn .btn-line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px;
-    background: #fff;
-    transition: all 1.5s ease-out; }
-  .back-btn .btn-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px); }
-  .back-btn .btn-line:nth-child(2) {
-    opacity: 0; }
-  .back-btn .btn-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px); }
-  .back-btn.close {
-    transform: rotate(180deg); }
-
 .menu {
   position: fixed;
   top: 0;
@@ -63,14 +41,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #cec8c6;
+    background: #9f8576;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 1.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #e9e3e1;
+    background: #493b33;
     transition: all 1.5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
@@ -91,7 +69,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #f486b4; }
+      color: #ded5d0; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -103,7 +81,7 @@
     text-decoration: none;
     transition: all 1.5s ease-out; }
     .menu .nav-link:hover {
-      color: #f486b4; }
+      color: #ded5d0; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -166,15 +144,8 @@ header {
   z-index: 2;
   width: 100%; }
 
-#workshop {
-  font-weight: bold; }
-
-.smaller-h {
-  color: #710a35;
-  font-weight: bold;
-  color: white;
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif; }
+.text-secondary {
+  color: #710a35; }
 
 main {
   padding: 4rem;
@@ -194,7 +165,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bio bio bio-img" "workshop workshop skills" "workshop workshop hobby";
+  grid-template-areas: "bio bio bio-img" "job-1 job-2 job-3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-img {
     grid-area: bio-img;
@@ -206,12 +177,12 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .workshop {
-    grid-area: workshop; }
-  .about-info .skills {
-    grid-area: skills; }
-  .about-info .hobby {
-    grid-area: hobby; }
+  .about-info .job-1 {
+    grid-area: job-1; }
+  .about-info .job-2 {
+    grid-area: job-2; }
+  .about-info .job-3 {
+    grid-area: job-3; }
   .about-info .job {
     background: rgba(122, 11, 57, 0.2);
     padding: 0.5rem;
@@ -323,7 +294,7 @@ main {
 #main-foter {
   text-align: center;
   padding: 1rem;
-  background: #ded5d0;
+  background: #c9bab2;
   color: #fff;
   height: 60px; }
 
@@ -363,7 +334,7 @@ main {
       width: 200px;
       height: 200px; }
   .about-info {
-    grid-template-areas: "bio-img" "bio" "workshop" "skills" "hobby";
+    grid-template-areas: "bio-img" "bio" "job-1" "job-2" "job-3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
